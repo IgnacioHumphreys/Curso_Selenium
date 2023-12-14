@@ -1,5 +1,4 @@
 import time
-import unittest
 
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -32,18 +31,18 @@ class Funciones_Globales:
         val = self.driver.find_element(By.XPATH, elemento)
         return val
 
-    def SEI(self,elemento):
-        val = WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located((By.ID,elemento)))
+    def SEI(self, elemento):
+        val = WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located((By.ID, elemento)))
         val = self.driver.execute_script("arguments[0].scrollIntoView();", val)
         val = self.driver.find_element(By.ID, elemento)
         return val
 
-    def Texto_Xpath_Validar(self,xpath,texto,tiempo):
+    def Texto_Xpath_Validar(self, xpath, texto, tiempo):
         try:
             val = self.SEX(xpath)
             val.clear()
             val.send_keys(texto)
-            print("Escribiendo en el campo {} el texto {} " .format(xpath,texto))
+            print("Escribiendo en el campo {} el texto {} " .format(xpath, texto))
             t = time.sleep(tiempo)
             return t
         except TimeoutException as ex:
@@ -51,7 +50,7 @@ class Funciones_Globales:
             print("El elemento no fue encontrado" + xpath)
             return t
 
-    def Click_Xpath_Validar(self,xpath,tiempo):
+    def Click_Xpath_Validar(self, xpath, tiempo):
         try:
             val = self.SEX(xpath)
             val.click()

@@ -10,7 +10,7 @@ from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import TimeoutException
 from Funciones.Funciones import Funciones_Globales
 from selenium.webdriver.chrome.service import Service
-from Funciones.Login import Pagina_Login
+from Funciones.Page_Login import Pagina_Login
 
 t=0.5
 
