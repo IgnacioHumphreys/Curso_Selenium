@@ -22,13 +22,13 @@ class Page_Login():
         f.Texto_Xpath_Validar("//input[@id='user-name']", name, t)
         f.Texto_Xpath_Validar("//input[contains(@id,'password')]", clave, t)
         f.Click_Xpath_Validar("//input[contains(@id,'login-button')]", t)
-        e1 = f.SEX("poner elemento")
+        e1 = f.SEX("//h3[@data-test='error']")
         e1 = e1.text
         #print(e1)
-        if (e1 == "poner mensaje"):
-            print("Login exitoso")
+        if (e1 == "Epic sadface: Username and password do not match any user in this service"):
+            print("Login_uno Exitoso")
         else:
-            print("Login no exitoso")
+            print("Login_uno NO exitoso")
         f.Salida()
 
     def Login_dos(self, name, clave, t):
@@ -38,11 +38,11 @@ class Page_Login():
         f.Texto_Xpath_Validar("//input[@id='user-name']", name, t)
         f.Texto_Xpath_Validar("//input[contains(@id,'password')]", clave, t)
         f.Click_Xpath_Validar("//input[contains(@id,'login-button')]", t)
-        e2 = f.SEX("poner elemento")
+        e2 = f.SEX("//h3[@data-test='error']")
         e2 = e2.text
-        # print(e1)
-        if (e2 == "poner mensaje"):
-            print("Login exitoso")
+        #print(e2)
+        if (e2 == "Suag Lags"):
+            print("Login_dos Exitoso")
         else:
-            print("Login no exitoso")
+            print("Login_dos NO exitoso")
         f.Salida()

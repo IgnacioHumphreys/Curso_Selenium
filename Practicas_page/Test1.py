@@ -25,14 +25,14 @@ class base_test(unittest.TestCase):
         f = Funciones_Globales(driver)
         pg = Page_Login(driver)
 
-        #pg.Login_uno("Ignacio", "1234", t)
-        #pg.Login_dos("admin", "admin", t)
+        pg.Login_uno("Ignacio", "1234", t)
+        pg.Login_dos("standard_user", "secret_sauce", t)
 
-        f.Navegar("https://testpages.eviltester.com/styled/file-upload-test.html", t)
-        f.Upload_Xpath("//input[contains(@id,'fileinput')]", "C://Users//ignac//PycharmProjects//Curso_Selenium//Imágenes//demo1.png", t)
-        f.Click_Xpath_Validar("//input[@id='itsanimage']", t)
-        f.Click_Xpath_Validar("//input[contains(@type,'submit')]", t)
+        #f.Navegar("https://testpages.eviltester.com/styled/file-upload-test.html", t)
+        #f.Upload_Xpath("//input[contains(@id,'fileinput')]", "C://Users//ignac//PycharmProjects//Curso_Selenium//Imágenes//demo1.png", t)
+        #f.Click_Xpath_Validar("//input[@id='itsanimage']", t)
+        #f.Click_Xpath_Validar("//input[contains(@type,'submit')]", t)
 
     def tearDown(self):
-        driver=self.driver
+        driver = self.driver
         driver.close()
